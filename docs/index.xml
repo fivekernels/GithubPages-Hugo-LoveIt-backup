@@ -11,6 +11,6 @@
     <pubDate>Thu, 21 Oct 2021 20:09:21 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://fivekernels.github.io/posts/my-first-post/</guid>
-    <description><![CDATA[h1 标题 h2 标题 纯文本&hellip;&hellip;&hellip;&hellip;. lihe! ihe! he! e! !]]></description>
+    <description><![CDATA[h1 标题 h2 标题 纯文本&hellip;&hellip;&hellip;&hellip;. lihe! ihe! he! e! ! #include &lt;stdio.h&gt;int main(void) { printf(&#34;hello world&#34;); return 0; }]]></description>
 </item></channel>
 </rss>
