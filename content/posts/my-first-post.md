@@ -34,4 +34,4 @@ int main(void)
 ```
 
 ![西京学院](/my-first-post/xjxy.jpg)
-![newyear](images/Newyear_ZH-CN7704868471_1920x1080.jpg)
+![newyear](./images/Newyear_ZH-CN7704868471_1920x1080.jpg)
