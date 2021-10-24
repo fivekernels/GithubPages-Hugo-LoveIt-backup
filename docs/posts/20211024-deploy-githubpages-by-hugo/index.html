@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>使用Hugo搭建Github Pages - 一顿乱写吧</title><meta name="Description" content=""><meta property="og:title" content="使用Hugo搭建Github Pages" />
+        <title>使用 Hugo 搭建 Github Pages - 一顿乱写吧</title><meta name="Description" content=""><meta property="og:title" content="使用 Hugo 搭建 Github Pages" />
 <meta property="og:description" content="Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><meta property="article:section" content="posts" />
@@ -13,7 +13,7 @@
 <meta property="article:modified_time" content="2021-10-24T20:15:26+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用Hugo搭建Github Pages"/>
+<meta name="twitter:title" content="使用 Hugo 搭建 Github Pages"/>
 <meta name="twitter:description" content="Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可"/>
 <meta name="application-name" content="一顿乱写吧">
 <meta name="apple-mobile-web-app-title" content="一顿乱写吧"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -22,12 +22,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "使用Hugo搭建Github Pages",
+        "headline": "使用 Hugo 搭建 Github Pages",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/"
-        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  147 ,
+        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  808 ,
         "url": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/","datePublished": "2021-10-24T20:15:26+08:00","dateModified": "2021-10-24T20:15:26+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -75,10 +75,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">使用Hugo搭建Github Pages</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">使用 Hugo 搭建 Github Pages</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 147 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 808 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -90,6 +90,7 @@
     <li><a href="#hugo">Hugo</a>
       <ul>
         <li><a href="#下载-hugo">下载 Hugo</a></li>
+        <li><a href="#创建-hugo-站点">创建 Hugo 站点</a></li>
       </ul>
     </li>
   </ul>
@@ -110,7 +111,169 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo version
 </code></pre></td></tr></table>
 </div>
-</div><p>待补充&hellip;</p>
+</div><h3 id="创建-hugo-站点">创建 Hugo 站点</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new site quickstart
+</code></pre></td></tr></table>
+</div>
+</div><p>找到一个你喜欢在本地存放代码的文件夹，执行这段代码，然后存放代码仓库的文件夹“quickstart”将会被创建，内部已经生成了Hugo所必须的一些代码。此时可以切换到代码仓库：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> quickstart
+</code></pre></td></tr></table>
+</div>
+</div><p>使用git初始化代码仓库：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init
+</code></pre></td></tr></table>
+</div>
+</div><p>从<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">Hugo主题网站上</a>找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule https://github.com/dillonzq/LoveIt themes/LoveIt
+git submodule add https://github.com/google/docsy themes/docsy
+</code></pre></td></tr></table>
+</div>
+</div><p>将主题信息写入hugo配置文件config.toml</p>
+<p>在config.toml添加一行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>同时可以配置一下其他信息，某些主题会有特定的规范。
+以<a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/#basic-configuration" target="_blank" rel="noopener noreffer">LoveIt主题</a>为例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
+<span class="c"># [en, zh-cn, fr, ...] 设置默认的语言</span>
+<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+<span class="c"># 网站语言, 仅在这里 CN 大写</span>
+<span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
+<span class="c"># 是否包括中日韩文字</span>
+<span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="c"># 网站标题</span>
+<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;我的全新 Hugo 网站&#34;</span>
+
+<span class="c"># 更改使用 Hugo 构建网站时使用的默认主题</span>
+<span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
+
+<span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+  <span class="c"># LoveIt 主题版本</span>
+  <span class="nx">version</span> <span class="p">=</span> <span class="s2">&#34;0.2.X&#34;</span>
+
+<span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
+  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
+    <span class="c"># 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标</span>
+    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="c"># 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标</span>
+    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;文章&#34;</span>
+    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
+    <span class="c"># 当你将鼠标悬停在此菜单链接上时, 将显示的标题</span>
+    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
+    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
+    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;分类&#34;</span>
+    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
+    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
+
+<span class="c"># Hugo 解析文档的配置</span>
+<span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+  <span class="c"># 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)</span>
+  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+    <span class="c"># false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)</span>
+    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>添加代码行号
+上述配置并不能将网页内代码行号显示出来，因此添加配置：</p>
+<p>待补充&hellip;</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
