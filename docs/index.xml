@@ -3,9 +3,16 @@
         <title>一顿乱写吧</title>
         <link>https://fivekernels.github.io/</link>
         <description>一顿乱写吧</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 22 Oct 2021 21:02:58 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 24 Oct 2021 20:15:26 &#43;0800</lastBuildDate>
             <atom:link href="https://fivekernels.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>使用Hugo搭建Github Pages</title>
+    <link>https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/</link>
+    <pubDate>Sun, 24 Oct 2021 20:15:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/</guid>
+    <description><![CDATA[Github Pages Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可选）即可。 在git ba]]></description>
+</item><item>
     <title>测试 section</title>
     <link>https://fivekernels.github.io/posts/test-section/</link>
     <pubDate>Fri, 22 Oct 2021 21:02:58 &#43;0800</pubDate>
