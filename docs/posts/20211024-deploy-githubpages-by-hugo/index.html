@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/"
-        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  808 ,
+        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  1216 ,
         "url": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/","datePublished": "2021-10-24T20:15:26+08:00","dateModified": "2021-10-24T20:15:26+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -77,8 +77,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">使用 Hugo 搭建 Github Pages</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 808 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1216 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -91,6 +91,8 @@
       <ul>
         <li><a href="#下载-hugo">下载 Hugo</a></li>
         <li><a href="#创建-hugo-站点">创建 Hugo 站点</a></li>
+        <li><a href="#站点配置">站点配置</a></li>
+        <li><a href="#创建文章">创建文章</a></li>
       </ul>
     </li>
   </ul>
@@ -129,7 +131,8 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> quickstart
 </code></pre></td></tr></table>
 </div>
-</div><p>使用git初始化代码仓库：</p>
+</div><h3 id="站点配置">站点配置</h3>
+<p>使用git初始化代码仓库：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -145,7 +148,7 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule https://github.com/dillonzq/LoveIt themes/LoveIt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule add https://github.com/dillonzq/LoveIt themes/LoveIt
 git submodule add https://github.com/google/docsy themes/docsy
 </code></pre></td></tr></table>
 </div>
@@ -212,20 +215,14 @@ git submodule add https://github.com/google/docsy themes/docsy
 </span><span class="lnt">47
 </span><span class="lnt">48
 </span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
-<span class="c"># [en, zh-cn, fr, ...] 设置默认的语言</span>
-<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
-<span class="c"># 网站语言, 仅在这里 CN 大写</span>
-<span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
-<span class="c"># 是否包括中日韩文字</span>
-<span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="c"># 网站标题</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;我的全新 Hugo 网站&#34;</span>
+
+<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span> <span class="c"># 默认语言 [en, zh-cn, fr, ...] </span>
+<span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span> <span class="c"># 网站语言, 仅在这里 CN 大写</span>
+<span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 是否包括中日韩文字</span>
+<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;我的全新 Hugo 网站&#34;</span> <span class="c"># 网站标题</span>
 
 <span class="c"># 更改使用 Hugo 构建网站时使用的默认主题</span>
 <span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
@@ -272,8 +269,101 @@ git submodule add https://github.com/google/docsy themes/docsy
 </code></pre></td></tr></table>
 </div>
 </div><p>添加代码行号
-上述配置并不能将网页内代码行号显示出来，因此添加配置：</p>
-<p>待补充&hellip;</p>
+上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer">（具体参见官方文档）</a>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">linenos</span> <span class="p">=</span> <span class="kc">true</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>其他未测试配置 来自<a href="https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/" target="_blank" rel="noopener noreffer">https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">pygmentsUseClasses</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+    <span class="nx">codeFences</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">hl_Lines</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+    <span class="nx">lineNoStart</span> <span class="p">=</span> <span class="mi">1</span>
+    <span class="nx">lineNos</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">lineNumbersInTable</span> <span class="p">=</span> <span class="kc">false</span>
+    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
+    <span class="nx">tabWidth</span> <span class="p">=</span> <span class="mi">4</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>防复制行号（未测试、可能使用的主题不需要配置）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">highlight</span> <span class="p">.</span><span class="nc">ln</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="c">/* 复制是不能被选中，其他的是格式上的调整 */</span>
+    <span class="k">padding-right</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="创建文章">创建文章</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new &lt;content内文件夹路径&gt;/&lt;文章文件名.md&gt;
+hugo new posts/my-first-post.md
+</code></pre></td></tr></table>
+</div>
+</div><p>以上命令在代码仓库中content\posts文件夹中创建文件&quot;my-first-post.md&quot;</p>
+<p>打开&quot;my-first-post.md&quot;，文件开头&quot;&mdash;&ldquo;之间已经存在预先生成的信息：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
+title: &#34;my-first-post&#34;
+date: 2021-10-21T20:09:21+08:00
+draft: true
+---
+</code></pre></td></tr></table>
+</div>
+</div><p>待补充&hellip;</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

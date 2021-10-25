@@ -37,6 +37,8 @@ hugo new site quickstart
 cd quickstart
 ```
 
+### 站点配置
+
 使用git初始化代码仓库：
 
 ```bash
@@ -46,7 +48,7 @@ git init
 从[Hugo主题网站上](https://themes.gohugo.io/)找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：
 
 ```bash
-git submodule https://github.com/dillonzq/LoveIt themes/LoveIt
+git submodule add https://github.com/dillonzq/LoveIt themes/LoveIt
 git submodule add https://github.com/google/docsy themes/docsy
 ```
 
@@ -63,14 +65,11 @@ theme = "LoveIt"
 
 ```toml
 baseURL = "http://example.org/"
-# [en, zh-cn, fr, ...] 设置默认的语言
-defaultContentLanguage = "zh-cn"
-# 网站语言, 仅在这里 CN 大写
-languageCode = "zh-CN"
-# 是否包括中日韩文字
-hasCJKLanguage = true
-# 网站标题
-title = "我的全新 Hugo 网站"
+
+defaultContentLanguage = "zh-cn" # 默认语言 [en, zh-cn, fr, ...] 
+languageCode = "zh-CN" # 网站语言, 仅在这里 CN 大写
+hasCJKLanguage = true # 是否包括中日韩文字
+title = "我的全新 Hugo 网站" # 网站标题
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
@@ -117,6 +116,60 @@ theme = "LoveIt"
 ```
 
 添加代码行号
-上述配置并不能将网页内代码行号显示出来，因此添加配置：
+上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置[（具体参见官方文档）](https://gohugo.io/content-management/syntax-highlighting/)：
+
+```toml
+linenos = true
+```
+
+其他未测试配置 来自<https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/>
+
+```toml
+pygmentsUseClasses = true
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "github"
+    tabWidth = 4
+```
+
+防复制行号（未测试、可能使用的主题不需要配置）
+
+```css
+.highlight .ln {
+    width: 20px;
+    display: block;
+    float: left;
+    text-align: right;
+    user-select: none; /* 复制是不能被选中，其他的是格式上的调整 */
+    padding-right: 8px;
+    color: #ccc;
+}
+```
+
+### 创建文章
+
+```bash
+hugo new <content内文件夹路径>/<文章文件名.md>
+hugo new posts/my-first-post.md
+```
+
+以上命令在代码仓库中content\posts文件夹中创建文件"my-first-post.md"
+
+打开"my-first-post.md"，文件开头"---"之间已经存在预先生成的信息：
+
+```md
+---
+title: "my-first-post"
+date: 2021-10-21T20:09:21+08:00
+draft: true
+---
+```
 
 待补充...
