@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 一顿乱写吧</title>
+        <title>所有文章 - 一顿乱写</title>
         <link>https://fivekernels.github.io/posts/</link>
-        <description>所有文章 | 一顿乱写吧</description>
+        <description>所有文章 | 一顿乱写</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 24 Oct 2021 20:15:26 &#43;0800</lastBuildDate><atom:link href="https://fivekernels.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>使用 Hugo 搭建 Github Pages</title>
     <link>https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/</link>

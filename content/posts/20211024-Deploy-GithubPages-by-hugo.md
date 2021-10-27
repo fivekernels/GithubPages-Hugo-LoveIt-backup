@@ -172,4 +172,88 @@ draft: true
 ---
 ```
 
+draft默认为true，不会被生成到网页中，编辑完成内容后将其修改为false以参与网页构建；或使用-D参数使草稿临时参与构建。
+
+### 构建网页
+
+```bash
+hugo server -D
+hugo
+```
+
+以上命令用于在本地生成，-D表示构建草稿。使用浏览器访问<http://localhost:1313>进行预览。
+
+```bash
+hugo
+```
+
+以上命令用于正式构建网页，默认构建在/public目录中。
+
+## 将 hugo 与 github 建立连接
+
+Github Pages中静态文件的存放位置有以下三种：（仓库中settings）
+
+- main 分支
+- main 分支下docs目录
+- gh-pages 分支(前提是这个分支存在)
+
+![Github Pages 静态页面设置](/20211024-Deploy-GithubPages-by-hugo/githu-pages-branch.png)
+
+为实现hugo静态页面的发布，可以在config.toml中添加以下配置：
+
+```toml
+publishDir = 'docs'
+```
+
+此后运行hugo命令将会使生成的网页文件保存在/docs目录下。将整个代码仓库推送到GitHub的main分支上，并在settings中设置站点source为main /docs。访问`https://<username>.github.io`即可看到成果。
+使用main分支的docs文件夹的好处是推一次代码就可以将源文档和构建的页面一起发布到GitHub中。如果希望对源文档和构建页面分别进行版本管理，则可以单独新建分支gh-pages（未测试）：参考<https://zhuanlan.zhihu.com/p/37752930>
+无需修改hugo的publishdir，直接将/public子目录添加到.gitignore文件中，使main分支忽略其更新；之后新建分支gh-pages。
+
+```bash
+# 忽略public子目录
+echo "public" >> .gitignore
+# 初始化gh-pages branch
+git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m "Initializing gh-pages branch"
+git push origin gh-pages
+git checkout master
+```
+
+为了提高每次发布的效率，可以将下述命令存在脚本中，每次只需要运行该脚本即可将gh-pages branch中的文章发布到Github的repo中：
+
+```bash
+#!/bin/sh
+
+if [[ $(git status -s) ]]
+then
+    echo "The working directory is dirty. Please commit any pending changes."
+    exit 1;
+fi
+
+echo "Deleting old publication"
+rm -rf public
+mkdir public
+rm -rf .git/worktrees/public/
+
+echo "Checking out gh-pages branch into public"
+git worktree add -B gh-pages public origin/gh-pages
+
+echo "Removing existing files"
+rm -rf public/*
+
+echo "Generating site"
+hugo
+
+echo "Updating gh-pages branch"
+cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
+
+echo "Push to origin"
+git push origin gh-pages
+```
+
+最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。
+
+## 添加个人域名
+
 待补充...

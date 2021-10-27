@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>使用 Hugo 搭建 Github Pages - 一顿乱写吧</title><meta name="Description" content=""><meta property="og:title" content="使用 Hugo 搭建 Github Pages" />
+        <title>使用 Hugo 搭建 Github Pages - 一顿乱写</title><meta name="Description" content=""><meta property="og:title" content="使用 Hugo 搭建 Github Pages" />
 <meta property="og:description" content="Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><meta property="article:section" content="posts" />
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用 Hugo 搭建 Github Pages"/>
 <meta name="twitter:description" content="Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可"/>
-<meta name="application-name" content="一顿乱写吧">
-<meta name="apple-mobile-web-app-title" content="一顿乱写吧"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="一顿乱写">
+<meta name="apple-mobile-web-app-title" content="一顿乱写"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><link rel="prev" href="https://fivekernels.github.io/posts/test-section/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/"
-        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  1216 ,
+        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  2159 ,
         "url": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/","datePublished": "2021-10-24T20:15:26+08:00","dateModified": "2021-10-24T20:15:26+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -41,7 +41,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="一顿乱写吧">一顿乱写吧</a>
+            <a href="/" title="一顿乱写">一顿乱写</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
@@ -54,7 +54,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="一顿乱写吧">一顿乱写吧</a>
+                <a href="/" title="一顿乱写">一顿乱写</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -77,8 +77,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">使用 Hugo 搭建 Github Pages</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1216 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2159 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -93,8 +93,11 @@
         <li><a href="#创建-hugo-站点">创建 Hugo 站点</a></li>
         <li><a href="#站点配置">站点配置</a></li>
         <li><a href="#创建文章">创建文章</a></li>
+        <li><a href="#构建网页">构建网页</a></li>
       </ul>
     </li>
+    <li><a href="#将-hugo-与-github-建立连接">将 hugo 与 github 建立连接</a></li>
+    <li><a href="#添加个人域名">添加个人域名</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="github-pages">Github Pages</h2>
@@ -363,7 +366,141 @@ draft: true
 ---
 </code></pre></td></tr></table>
 </div>
-</div><p>待补充&hellip;</p>
+</div><p>draft默认为true，不会被生成到网页中，编辑完成内容后将其修改为false以参与网页构建；或使用-D参数使草稿临时参与构建。</p>
+<h3 id="构建网页">构建网页</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo server -D
+hugo
+</code></pre></td></tr></table>
+</div>
+</div><p>以上命令用于在本地生成，-D表示构建草稿。使用浏览器访问<a href="http://localhost:1313" target="_blank" rel="noopener noreffer">http://localhost:1313</a>进行预览。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo
+</code></pre></td></tr></table>
+</div>
+</div><p>以上命令用于正式构建网页，默认构建在/public目录中。</p>
+<h2 id="将-hugo-与-github-建立连接">将 hugo 与 github 建立连接</h2>
+<p>Github Pages中静态文件的存放位置有以下三种：（仓库中settings）</p>
+<ul>
+<li>main 分支</li>
+<li>main 分支下docs目录</li>
+<li>gh-pages 分支(前提是这个分支存在)</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/20211024-Deploy-GithubPages-by-hugo/githu-pages-branch.png"
+        data-srcset="/20211024-Deploy-GithubPages-by-hugo/githu-pages-branch.png, /20211024-Deploy-GithubPages-by-hugo/githu-pages-branch.png 1.5x, /20211024-Deploy-GithubPages-by-hugo/githu-pages-branch.png 2x"
+        data-sizes="auto"
+        alt="/20211024-Deploy-GithubPages-by-hugo/githu-pages-branch.png"
+        title="Github Pages 静态页面设置" /></p>
+<p>为实现hugo静态页面的发布，可以在config.toml中添加以下配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s1">&#39;docs&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此后运行hugo命令将会使生成的网页文件保存在/docs目录下。将整个代码仓库推送到GitHub的main分支上，并在settings中设置站点source为main /docs。访问<code>https://&lt;username&gt;.github.io</code>即可看到成果。
+使用main分支的docs文件夹的好处是推一次代码就可以将源文档和构建的页面一起发布到GitHub中。如果希望对源文档和构建页面分别进行版本管理，则可以单独新建分支gh-pages（未测试）：参考<a href="https://zhuanlan.zhihu.com/p/37752930" target="_blank" rel="noopener noreffer">https://zhuanlan.zhihu.com/p/37752930</a>
+无需修改hugo的publishdir，直接将/public子目录添加到.gitignore文件中，使main分支忽略其更新；之后新建分支gh-pages。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 忽略public子目录</span>
+<span class="nb">echo</span> <span class="s2">&#34;public&#34;</span> &gt;&gt; .gitignore
+<span class="c1"># 初始化gh-pages branch</span>
+git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m <span class="s2">&#34;Initializing gh-pages branch&#34;</span>
+git push origin gh-pages
+git checkout master
+</code></pre></td></tr></table>
+</div>
+</div><p>为了提高每次发布的效率，可以将下述命令存在脚本中，每次只需要运行该脚本即可将gh-pages branch中的文章发布到Github的repo中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="k">if</span> <span class="o">[[</span> <span class="k">$(</span>git status -s<span class="k">)</span> <span class="o">]]</span>
+<span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&#34;The working directory is dirty. Please commit any pending changes.&#34;</span>
+    <span class="nb">exit</span> 1<span class="p">;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Deleting old publication&#34;</span>
+rm -rf public
+mkdir public
+rm -rf .git/worktrees/public/
+
+<span class="nb">echo</span> <span class="s2">&#34;Checking out gh-pages branch into public&#34;</span>
+git worktree add -B gh-pages public origin/gh-pages
+
+<span class="nb">echo</span> <span class="s2">&#34;Removing existing files&#34;</span>
+rm -rf public/*
+
+<span class="nb">echo</span> <span class="s2">&#34;Generating site&#34;</span>
+hugo
+
+<span class="nb">echo</span> <span class="s2">&#34;Updating gh-pages branch&#34;</span>
+<span class="nb">cd</span> public <span class="o">&amp;&amp;</span> git add --all <span class="o">&amp;&amp;</span> git commit -m <span class="s2">&#34;Publishing to gh-pages (publish.sh)&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;Push to origin&#34;</span>
+git push origin gh-pages
+</code></pre></td></tr></table>
+</div>
+</div><p>最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。</p>
+<h2 id="添加个人域名">添加个人域名</h2>
+<p>待补充&hellip;</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
