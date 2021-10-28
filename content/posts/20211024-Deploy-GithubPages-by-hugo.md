@@ -3,6 +3,7 @@ title: "使用 Hugo 搭建 Github Pages"
 tags: [ "Github Pages", "Hugo"]
 categories: [ "Github Pages" ]
 date: 2021-10-24T20:15:26+08:00
+lastmod: 2021-10-28T08:37:00+08:00
 draft: false
 ---
 
@@ -18,7 +19,7 @@ draft: false
 
 Github <https://github.com/gohugoio/hugo/releases>
 
-Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可选）即可。
+&emsp;&emsp;Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可选）即可。
 在git bash中敲入一下命令确认可以执行；不建议使用Powershell，因为后续使用echo等命令时会造成乱码。
 
 ```bash
@@ -31,37 +32,34 @@ hugo version
 hugo new site quickstart
 ```
 
-找到一个你喜欢在本地存放代码的文件夹，执行这段代码，然后存放代码仓库的文件夹“quickstart”将会被创建，内部已经生成了Hugo所必须的一些代码。此时可以切换到代码仓库：
+&emsp;&emsp;找到一个你喜欢在本地存放代码的文件夹，执行这段代码，然后存放代码仓库的文件夹“quickstart”将会被创建，内部已经生成了Hugo所必须的一些代码。此时可以切换到代码仓库：
 
 ```bash
 cd quickstart
 ```
 
-### 站点配置
-
-使用git初始化代码仓库：
+&emsp;&emsp;之后可以使用git初始化代码仓库：
 
 ```bash
 git init
 ```
 
-从[Hugo主题网站上](https://themes.gohugo.io/)找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：
+### 站点配置
+
+&emsp;&emsp;从[Hugo主题网站上](https://themes.gohugo.io/)找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：
 
 ```bash
 git submodule add https://github.com/dillonzq/LoveIt themes/LoveIt
 git submodule add https://github.com/google/docsy themes/docsy
 ```
 
-将主题信息写入hugo配置文件config.toml
-
-在config.toml添加一行
+&emsp;&emsp;将主题信息写入hugo配置文件config.toml，在config.toml添加一行：
 
 ```toml
 theme = "LoveIt"
 ```
 
-同时可以配置一下其他信息，某些主题会有特定的规范。
-以[LoveIt主题](https://hugoloveit.com/zh-cn/theme-documentation-basics/#basic-configuration)为例
+&emsp;&emsp;同时可以配置一下其他信息，某些主题会有特定的规范。以[LoveIt主题](https://hugoloveit.com/zh-cn/theme-documentation-basics/#basic-configuration)为例
 
 ```toml
 baseURL = "http://example.org/"
@@ -115,14 +113,15 @@ theme = "LoveIt"
     noClasses = false
 ```
 
-添加代码行号
-上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置[（具体参见官方文档）](https://gohugo.io/content-management/syntax-highlighting/)：
+#### 代码行号
+
+&emsp;&emsp;上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置[（具体参见官方文档）](https://gohugo.io/content-management/syntax-highlighting/)：
 
 ```toml
 linenos = true
 ```
 
-其他未测试配置 来自<https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/>
+其他未测试配置（来自<https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/>）
 
 ```toml
 pygmentsUseClasses = true
@@ -160,9 +159,8 @@ hugo new <content内文件夹路径>/<文章文件名.md>
 hugo new posts/my-first-post.md
 ```
 
-以上命令在代码仓库中content\posts文件夹中创建文件"my-first-post.md"
-
-打开"my-first-post.md"，文件开头"---"之间已经存在预先生成的信息：
+&emsp;&emsp;以上命令在代码仓库中content\posts文件夹中创建文件"my-first-post.md"。  
+&emsp;&emsp;打开"my-first-post.md"，文件开头"---"之间已经存在预先生成的信息：
 
 ```md
 ---
@@ -172,26 +170,26 @@ draft: true
 ---
 ```
 
-draft默认为true，不会被生成到网页中，编辑完成内容后将其修改为false以参与网页构建；或使用-D参数使草稿临时参与构建。
+&emsp;&emsp;draft默认为true，此时不会被生成到网页中；编辑完成内容后将其修改为false以参与网页构建，或使用-D参数使草稿临时参与构建。
 
 ### 构建网页
+
+&emsp;&emsp;在本地生成，-D表示构建草稿。使用浏览器访问<http://localhost:1313>进行预览。
 
 ```bash
 hugo server -D
 hugo
 ```
 
-以上命令用于在本地生成，-D表示构建草稿。使用浏览器访问<http://localhost:1313>进行预览。
+&emsp;&emsp;正式构建网页，默认构建在/public目录中。
 
 ```bash
 hugo
 ```
 
-以上命令用于正式构建网页，默认构建在/public目录中。
-
 ## 将 hugo 与 github 建立连接
 
-Github Pages中静态文件的存放位置有以下三种：（仓库中settings）
+&emsp;&emsp;Github Pages中静态文件的存放位置有以下三种：（仓库中settings）
 
 - main 分支
 - main 分支下docs目录
@@ -202,12 +200,12 @@ Github Pages中静态文件的存放位置有以下三种：（仓库中settings
 为实现hugo静态页面的发布，可以在config.toml中添加以下配置：
 
 ```toml
-publishDir = 'docs'
+publishdir = 'docs'
 ```
 
-此后运行hugo命令将会使生成的网页文件保存在/docs目录下。将整个代码仓库推送到GitHub的main分支上，并在settings中设置站点source为main /docs。访问`https://<username>.github.io`即可看到成果。
-使用main分支的docs文件夹的好处是推一次代码就可以将源文档和构建的页面一起发布到GitHub中。如果希望对源文档和构建页面分别进行版本管理，则可以单独新建分支gh-pages（未测试）：参考<https://zhuanlan.zhihu.com/p/37752930>
-无需修改hugo的publishdir，直接将/public子目录添加到.gitignore文件中，使main分支忽略其更新；之后新建分支gh-pages。
+&emsp;&emsp;此后运行hugo命令将会使生成的网页文件保存在/docs目录下。将整个代码仓库推送到GitHub的main分支上，并在settings中设置站点source为main /docs。访问`https://<username>.github.io`即可看到成果。  
+&emsp;&emsp;使用main分支的docs文件夹的好处是推一次代码就可以将源文档和构建的页面一起发布到GitHub中；如果希望对源文档和构建页面分别进行版本管理，则可以单独新建分支gh-pages（未测试）：参考<https://zhuanlan.zhihu.com/p/37752930>  
+&emsp;&emsp;无需修改hugo的publishdir，直接将/public子目录添加到.gitignore文件中，使main分支忽略其更新；之后新建分支gh-pages。
 
 ```bash
 # 忽略public子目录
@@ -220,7 +218,7 @@ git push origin gh-pages
 git checkout master
 ```
 
-为了提高每次发布的效率，可以将下述命令存在脚本中，每次只需要运行该脚本即可将gh-pages branch中的文章发布到Github的repo中：
+&emsp;&emsp;为了提高每次发布的效率，可以将下述命令存在脚本中，每次只需要运行该脚本即可将gh-pages branch中的文章发布到Github的repo中：
 
 ```bash
 #!/bin/sh
@@ -252,7 +250,7 @@ echo "Push to origin"
 git push origin gh-pages
 ```
 
-最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。
+&emsp;&emsp;最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。
 
 ## 添加个人域名
 

@@ -10,7 +10,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-24T20:15:26+08:00" />
-<meta property="article:modified_time" content="2021-10-24T20:15:26+08:00" />
+<meta property="article:modified_time" content="2021-10-28T08:37:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用 Hugo 搭建 Github Pages"/>
@@ -27,8 +27,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/"
-        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  2159 ,
-        "url": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/","datePublished": "2021-10-24T20:15:26+08:00","dateModified": "2021-10-24T20:15:26+08:00","publisher": {
+        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  2156 ,
+        "url": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/","datePublished": "2021-10-24T20:15:26+08:00","dateModified": "2021-10-28T08:37:00+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
                 "@type": "Person",
@@ -77,7 +77,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">使用 Hugo 搭建 Github Pages</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2159 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2156 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -106,7 +106,7 @@
 <p>官网连接： <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer">Hugo_Quick-Start</a></p>
 <h3 id="下载-hugo">下载 Hugo</h3>
 <p>Github <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">https://github.com/gohugoio/hugo/releases</a></p>
-<p>Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可选）即可。
+<p>  Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可选）即可。
 在git bash中敲入一下命令确认可以执行；不建议使用Powershell，因为后续使用echo等命令时会造成乱码。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -125,7 +125,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new site quickstart
 </code></pre></td></tr></table>
 </div>
-</div><p>找到一个你喜欢在本地存放代码的文件夹，执行这段代码，然后存放代码仓库的文件夹“quickstart”将会被创建，内部已经生成了Hugo所必须的一些代码。此时可以切换到代码仓库：</p>
+</div><p>  找到一个你喜欢在本地存放代码的文件夹，执行这段代码，然后存放代码仓库的文件夹“quickstart”将会被创建，内部已经生成了Hugo所必须的一些代码。此时可以切换到代码仓库：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -134,8 +134,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> quickstart
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="站点配置">站点配置</h3>
-<p>使用git初始化代码仓库：</p>
+</div><p>  之后可以使用git初始化代码仓库：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -144,7 +143,8 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init
 </code></pre></td></tr></table>
 </div>
-</div><p>从<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">Hugo主题网站上</a>找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：</p>
+</div><h3 id="站点配置">站点配置</h3>
+<p>  从<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">Hugo主题网站上</a>找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -155,8 +155,7 @@
 git submodule add https://github.com/google/docsy themes/docsy
 </code></pre></td></tr></table>
 </div>
-</div><p>将主题信息写入hugo配置文件config.toml</p>
-<p>在config.toml添加一行</p>
+</div><p>  将主题信息写入hugo配置文件config.toml，在config.toml添加一行：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -165,8 +164,7 @@ git submodule add https://github.com/google/docsy themes/docsy
 <pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>同时可以配置一下其他信息，某些主题会有特定的规范。
-以<a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/#basic-configuration" target="_blank" rel="noopener noreffer">LoveIt主题</a>为例</p>
+</div><p>  同时可以配置一下其他信息，某些主题会有特定的规范。以<a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/#basic-configuration" target="_blank" rel="noopener noreffer">LoveIt主题</a>为例</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -271,8 +269,8 @@ git submodule add https://github.com/google/docsy themes/docsy
     <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>添加代码行号
-上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer">（具体参见官方文档）</a>：</p>
+</div><h4 id="代码行号">代码行号</h4>
+<p>  上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer">（具体参见官方文档）</a>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -281,7 +279,7 @@ git submodule add https://github.com/google/docsy themes/docsy
 <pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">linenos</span> <span class="p">=</span> <span class="kc">true</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>其他未测试配置 来自<a href="https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/" target="_blank" rel="noopener noreffer">https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/</a></p>
+</div><p>其他未测试配置（来自<a href="https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/" target="_blank" rel="noopener noreffer">https://huangzhongde.cn/post/2020-02-22-hugo-code-linenumber/</a>）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -348,8 +346,8 @@ git submodule add https://github.com/google/docsy themes/docsy
 hugo new posts/my-first-post.md
 </code></pre></td></tr></table>
 </div>
-</div><p>以上命令在代码仓库中content\posts文件夹中创建文件&quot;my-first-post.md&quot;</p>
-<p>打开&quot;my-first-post.md&quot;，文件开头&quot;&mdash;&ldquo;之间已经存在预先生成的信息：</p>
+</div><p>  以上命令在代码仓库中content\posts文件夹中创建文件&quot;my-first-post.md&quot;。<br>
+  打开&quot;my-first-post.md&quot;，文件开头&quot;&mdash;&ldquo;之间已经存在预先生成的信息：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -366,8 +364,9 @@ draft: true
 ---
 </code></pre></td></tr></table>
 </div>
-</div><p>draft默认为true，不会被生成到网页中，编辑完成内容后将其修改为false以参与网页构建；或使用-D参数使草稿临时参与构建。</p>
+</div><p>  draft默认为true，此时不会被生成到网页中；编辑完成内容后将其修改为false以参与网页构建，或使用-D参数使草稿临时参与构建。</p>
 <h3 id="构建网页">构建网页</h3>
+<p>  在本地生成，-D表示构建草稿。使用浏览器访问<a href="http://localhost:1313" target="_blank" rel="noopener noreffer">http://localhost:1313</a>进行预览。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -378,7 +377,7 @@ draft: true
 hugo
 </code></pre></td></tr></table>
 </div>
-</div><p>以上命令用于在本地生成，-D表示构建草稿。使用浏览器访问<a href="http://localhost:1313" target="_blank" rel="noopener noreffer">http://localhost:1313</a>进行预览。</p>
+</div><p>  正式构建网页，默认构建在/public目录中。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -387,9 +386,8 @@ hugo
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo
 </code></pre></td></tr></table>
 </div>
-</div><p>以上命令用于正式构建网页，默认构建在/public目录中。</p>
-<h2 id="将-hugo-与-github-建立连接">将 hugo 与 github 建立连接</h2>
-<p>Github Pages中静态文件的存放位置有以下三种：（仓库中settings）</p>
+</div><h2 id="将-hugo-与-github-建立连接">将 hugo 与 github 建立连接</h2>
+<p>  Github Pages中静态文件的存放位置有以下三种：（仓库中settings）</p>
 <ul>
 <li>main 分支</li>
 <li>main 分支下docs目录</li>
@@ -409,12 +407,12 @@ hugo
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s1">&#39;docs&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">publishdir</span> <span class="p">=</span> <span class="s1">&#39;docs&#39;</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>此后运行hugo命令将会使生成的网页文件保存在/docs目录下。将整个代码仓库推送到GitHub的main分支上，并在settings中设置站点source为main /docs。访问<code>https://&lt;username&gt;.github.io</code>即可看到成果。
-使用main分支的docs文件夹的好处是推一次代码就可以将源文档和构建的页面一起发布到GitHub中。如果希望对源文档和构建页面分别进行版本管理，则可以单独新建分支gh-pages（未测试）：参考<a href="https://zhuanlan.zhihu.com/p/37752930" target="_blank" rel="noopener noreffer">https://zhuanlan.zhihu.com/p/37752930</a>
-无需修改hugo的publishdir，直接将/public子目录添加到.gitignore文件中，使main分支忽略其更新；之后新建分支gh-pages。</p>
+</div><p>  此后运行hugo命令将会使生成的网页文件保存在/docs目录下。将整个代码仓库推送到GitHub的main分支上，并在settings中设置站点source为main /docs。访问<code>https://&lt;username&gt;.github.io</code>即可看到成果。<br>
+  使用main分支的docs文件夹的好处是推一次代码就可以将源文档和构建的页面一起发布到GitHub中；如果希望对源文档和构建页面分别进行版本管理，则可以单独新建分支gh-pages（未测试）：参考<a href="https://zhuanlan.zhihu.com/p/37752930" target="_blank" rel="noopener noreffer">https://zhuanlan.zhihu.com/p/37752930</a><br>
+  无需修改hugo的publishdir，直接将/public子目录添加到.gitignore文件中，使main分支忽略其更新；之后新建分支gh-pages。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -437,7 +435,7 @@ git push origin gh-pages
 git checkout master
 </code></pre></td></tr></table>
 </div>
-</div><p>为了提高每次发布的效率，可以将下述命令存在脚本中，每次只需要运行该脚本即可将gh-pages branch中的文章发布到Github的repo中：</p>
+</div><p>  为了提高每次发布的效率，可以将下述命令存在脚本中，每次只需要运行该脚本即可将gh-pages branch中的文章发布到Github的repo中：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -498,14 +496,14 @@ hugo
 git push origin gh-pages
 </code></pre></td></tr></table>
 </div>
-</div><p>最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。</p>
+</div><p>  最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。</p>
 <h2 id="添加个人域名">添加个人域名</h2>
 <p>待补充&hellip;</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-10-24</span>
+                <span>更新于 2021-10-28</span>
             </div>
             <div class="post-info-license"></div>
         </div>
