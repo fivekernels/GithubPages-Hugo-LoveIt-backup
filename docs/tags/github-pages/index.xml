@@ -9,6 +9,6 @@
     <pubDate>Sun, 24 Oct 2021 20:15:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/</guid>
-    <description><![CDATA[GitHub Pages GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为&quot;&lt;username&gt;.github.io&]]></description>
+    <description><![CDATA[GitHub Pages GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为&quot;&lt;username&gt;.github.io&quot;的仓库作为一个静态网页入口。它有3种存在方式： 识别 main branch 根目录下的：README.md 或 index.html 识别 main branch /docs 目录下的：README.md 或 index.html]]></description>
 </item></channel>
 </rss>
