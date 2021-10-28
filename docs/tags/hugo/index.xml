@@ -3,12 +3,19 @@
         <title>Hugo - 标签 - 一顿乱写</title>
         <link>https://fivekernels.github.io/tags/hugo/</link>
         <description>Hugo - 标签 - 一顿乱写</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 24 Oct 2021 20:15:26 &#43;0800</lastBuildDate><atom:link href="https://fivekernels.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
-    <title>使用 Hugo 搭建 Github Pages</title>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 28 Oct 2021 11:10:22 &#43;0800</lastBuildDate><atom:link href="https://fivekernels.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo 文件管理与图片存放</title>
+    <link>https://fivekernels.github.io/posts/20211028-hugo-content-management/</link>
+    <pubDate>Thu, 28 Oct 2021 11:10:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://fivekernels.github.io/posts/20211028-hugo-content-management/</guid>
+    <description><![CDATA[hey &hellip;待更新&hellip;]]></description>
+</item><item>
+    <title>使用 Hugo 搭建 GitHub Pages</title>
     <link>https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/</link>
     <pubDate>Sun, 24 Oct 2021 20:15:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/</guid>
-    <description><![CDATA[Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可]]></description>
+    <description><![CDATA[GitHub Pages GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为&quot;&lt;username&gt;.github.io&]]></description>
 </item></channel>
 </rss>

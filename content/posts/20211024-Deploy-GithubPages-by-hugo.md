@@ -1,15 +1,37 @@
 ---
-title: "使用 Hugo 搭建 Github Pages"
-tags: [ "Github Pages", "Hugo"]
-categories: [ "Github Pages" ]
+title: "使用 Hugo 搭建 GitHub Pages"
+tags: [ "GitHub Pages", "Hugo"]
+categories: [ "GitHub Pages" ]
 date: 2021-10-24T20:15:26+08:00
 lastmod: 2021-10-28T08:37:00+08:00
 draft: false
 ---
 
-## Github Pages
+## GitHub Pages
 
-待补充...
+&emsp;&emsp;GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为"\<username\>.github.io"的仓库作为一个静态网页入口。它有3种存在方式：
+
+- 识别 main branch 根目录下的：README.md 或 index.html
+- 识别 main branch /docs 目录下的：README.md 或 index.html
+- 识别 gh-pages branch 根目录下的：README.md 或 index.html
+
+&emsp;&emsp;因此我们可以在GitHub上创建一个名为\<username\>.github.io的public仓库，如果想方便的查看效果，可以勾选生成默认的readme.md，之后访问\<username\>.github.io即可看到效果。如果希望自定义网页内容，则可以不勾选生成readme.md，而将其克隆到本地：
+
+```bash
+git clone git@github.com:<username>/<username>.github.io.git
+cd <username>.github.io
+echo "Hello World" > index.html
+```
+
+&emsp;&emsp;之后推到GitHub，访问\<username\>.github.io即可看到效果。
+
+```bash
+git add --all
+git commit -m "Initial commit"
+git push -u origin main
+```
+
+参考：[GitHub官方教程](https://pages.github.com/)
 
 ## Hugo
 
@@ -49,8 +71,8 @@ git init
 &emsp;&emsp;从[Hugo主题网站上](https://themes.gohugo.io/)找一个喜欢的主题，使用git同步到本地代码仓库的themes文件夹。下面挑了两个比较喜欢的：
 
 ```bash
-git submodule add https://github.com/dillonzq/LoveIt themes/LoveIt
-git submodule add https://github.com/google/docsy themes/docsy
+git submodule add git@github.com:dillonzq/LoveIt.git themes/LoveIt
+git submodule add git@github.com:google/docsy.git themes/docsy
 ```
 
 &emsp;&emsp;将主题信息写入hugo配置文件config.toml，在config.toml添加一行：
@@ -115,7 +137,7 @@ theme = "LoveIt"
 
 #### 代码行号
 
-&emsp;&emsp;上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置[（具体参见官方文档）](https://gohugo.io/content-management/syntax-highlighting/)：
+&emsp;&emsp;上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置（具体参见[官方文档](https://gohugo.io/content-management/syntax-highlighting/)）：
 
 ```toml
 linenos = true
@@ -159,7 +181,7 @@ hugo new <content内文件夹路径>/<文章文件名.md>
 hugo new posts/my-first-post.md
 ```
 
-&emsp;&emsp;以上命令在代码仓库中content\posts文件夹中创建文件"my-first-post.md"。  
+&emsp;&emsp;以上命令在代码仓库中content\posts文件夹中创建文章草稿"my-first-post.md"。  
 &emsp;&emsp;打开"my-first-post.md"，文件开头"---"之间已经存在预先生成的信息：
 
 ```md
@@ -187,7 +209,7 @@ hugo
 hugo
 ```
 
-## 将 hugo 与 github 建立连接
+## 将 Hugo 与 GitHub 建立连接
 
 &emsp;&emsp;Github Pages中静态文件的存放位置有以下三种：（仓库中settings）
 
@@ -250,8 +272,9 @@ echo "Push to origin"
 git push origin gh-pages
 ```
 
-&emsp;&emsp;最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。
+&emsp;&emsp;最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将source选定gh-pages即可。
 
 ## 添加个人域名
 
+CloudFlare https  
 待补充...

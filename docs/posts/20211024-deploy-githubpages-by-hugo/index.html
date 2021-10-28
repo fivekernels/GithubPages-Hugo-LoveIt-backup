@@ -5,29 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>使用 Hugo 搭建 Github Pages - 一顿乱写</title><meta name="Description" content=""><meta property="og:title" content="使用 Hugo 搭建 Github Pages" />
-<meta property="og:description" content="Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可" />
+        <title>使用 Hugo 搭建 GitHub Pages - 一顿乱写</title><meta name="Description" content=""><meta property="og:title" content="使用 Hugo 搭建 GitHub Pages" />
+<meta property="og:description" content="GitHub Pages GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为&quot;&lt;username&gt;.github.io&" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-24T20:15:26+08:00" />
 <meta property="article:modified_time" content="2021-10-28T08:37:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 Hugo 搭建 Github Pages"/>
-<meta name="twitter:description" content="Github Pages 待补充&hellip; Hugo 官网连接： Hugo_Quick-Start 下载 Hugo Github https://github.com/gohugoio/hugo/releases Windows中无需安装，解压到喜欢的位置后将hugo.exe所在路径添加到环境变量中（可"/>
+<meta name="twitter:title" content="使用 Hugo 搭建 GitHub Pages"/>
+<meta name="twitter:description" content="GitHub Pages GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为&quot;&lt;username&gt;.github.io&"/>
 <meta name="application-name" content="一顿乱写">
 <meta name="apple-mobile-web-app-title" content="一顿乱写"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><link rel="prev" href="https://fivekernels.github.io/posts/test-section/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://fivekernels.github.io/posts/20211024-deploy-githubpages-by-hugo/" /><link rel="prev" href="https://fivekernels.github.io/posts/test-section/" /><link rel="next" href="https://fivekernels.github.io/posts/20211028-hugo-content-management/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "使用 Hugo 搭建 Github Pages",
+        "headline": "使用 Hugo 搭建 GitHub Pages",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/"
-        },"genre": "posts","keywords": "Github Pages, Hugo","wordcount":  2156 ,
+        },"genre": "posts","keywords": "GitHub Pages, Hugo","wordcount":  2558 ,
         "url": "https:\/\/fivekernels.github.io\/posts\/20211024-deploy-githubpages-by-hugo\/","datePublished": "2021-10-24T20:15:26+08:00","dateModified": "2021-10-28T08:37:00+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -75,10 +75,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">使用 Hugo 搭建 Github Pages</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2156 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">使用 Hugo 搭建 GitHub Pages</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>GitHub Pages</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-24">2021-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2558 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#github-pages">Github Pages</a></li>
+    <li><a href="#github-pages">GitHub Pages</a></li>
     <li><a href="#hugo">Hugo</a>
       <ul>
         <li><a href="#下载-hugo">下载 Hugo</a></li>
@@ -96,12 +96,44 @@
         <li><a href="#构建网页">构建网页</a></li>
       </ul>
     </li>
-    <li><a href="#将-hugo-与-github-建立连接">将 hugo 与 github 建立连接</a></li>
+    <li><a href="#将-hugo-与-github-建立连接">将 Hugo 与 GitHub 建立连接</a></li>
     <li><a href="#添加个人域名">添加个人域名</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="github-pages">Github Pages</h2>
-<p>待补充&hellip;</p>
+            </div><div class="content" id="content"><h2 id="github-pages">GitHub Pages</h2>
+<p>  GitHub Pages 本质上是一个静态网站托管系统，比较常用的是个人站点，也就是创建名为&quot;&lt;username&gt;.github.io&quot;的仓库作为一个静态网页入口。它有3种存在方式：</p>
+<ul>
+<li>识别 main branch 根目录下的：README.md 或 index.html</li>
+<li>识别 main branch /docs 目录下的：README.md 或 index.html</li>
+<li>识别 gh-pages branch 根目录下的：README.md 或 index.html</li>
+</ul>
+<p>  因此我们可以在GitHub上创建一个名为&lt;username&gt;.github.io的public仓库，如果想方便的查看效果，可以勾选生成默认的readme.md，之后访问&lt;username&gt;.github.io即可看到效果。如果希望自定义网页内容，则可以不勾选生成readme.md，而将其克隆到本地：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git
+<span class="nb">cd</span> &lt;username&gt;.github.io
+<span class="nb">echo</span> <span class="s2">&#34;Hello World&#34;</span> &gt; index.html
+</code></pre></td></tr></table>
+</div>
+</div><p>  之后推到GitHub，访问&lt;username&gt;.github.io即可看到效果。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git add --all
+git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+git push -u origin main
+</code></pre></td></tr></table>
+</div>
+</div><p>参考：<a href="https://pages.github.com/" target="_blank" rel="noopener noreffer">GitHub官方教程</a></p>
 <h2 id="hugo">Hugo</h2>
 <p>官网连接： <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener noreffer">Hugo_Quick-Start</a></p>
 <h3 id="下载-hugo">下载 Hugo</h3>
@@ -151,8 +183,8 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule add https://github.com/dillonzq/LoveIt themes/LoveIt
-git submodule add https://github.com/google/docsy themes/docsy
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git submodule add git@github.com:dillonzq/LoveIt.git themes/LoveIt
+git submodule add git@github.com:google/docsy.git themes/docsy
 </code></pre></td></tr></table>
 </div>
 </div><p>  将主题信息写入hugo配置文件config.toml，在config.toml添加一行：</p>
@@ -270,7 +302,7 @@ git submodule add https://github.com/google/docsy themes/docsy
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="代码行号">代码行号</h4>
-<p>  上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer">（具体参见官方文档）</a>：</p>
+<p>  上述配置并不能将网页内代码行号显示出来，因此在[markup.highlight]下添加配置（具体参见<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer">官方文档</a>）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -346,7 +378,7 @@ git submodule add https://github.com/google/docsy themes/docsy
 hugo new posts/my-first-post.md
 </code></pre></td></tr></table>
 </div>
-</div><p>  以上命令在代码仓库中content\posts文件夹中创建文件&quot;my-first-post.md&quot;。<br>
+</div><p>  以上命令在代码仓库中content\posts文件夹中创建文章草稿&quot;my-first-post.md&quot;。<br>
   打开&quot;my-first-post.md&quot;，文件开头&quot;&mdash;&ldquo;之间已经存在预先生成的信息：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -386,7 +418,7 @@ hugo
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="将-hugo-与-github-建立连接">将 hugo 与 github 建立连接</h2>
+</div><h2 id="将-hugo-与-github-建立连接">将 Hugo 与 GitHub 建立连接</h2>
 <p>  Github Pages中静态文件的存放位置有以下三种：（仓库中settings）</p>
 <ul>
 <li>main 分支</li>
@@ -496,9 +528,10 @@ hugo
 git push origin gh-pages
 </code></pre></td></tr></table>
 </div>
-</div><p>  最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将Source选定gh-pages即可。</p>
+</div><p>  最后将main分支中的源文档和gh-pages分支h中的网页文档分别push到Github仓库中，进入settings将source选定gh-pages即可。</p>
 <h2 id="添加个人域名">添加个人域名</h2>
-<p>待补充&hellip;</p>
+<p>CloudFlare https<br>
+待补充&hellip;</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -516,13 +549,14 @@ git push origin gh-pages
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/github-pages/">Github Pages</a>,&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/github-pages/">GitHub Pages</a>,&nbsp;<a href="/tags/hugo/">Hugo</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/test-section/" class="prev" rel="prev" title="测试 section"><i class="fas fa-angle-left fa-fw"></i>测试 section</a></div>
+    <div class="post-nav"><a href="/posts/test-section/" class="prev" rel="prev" title="测试 section"><i class="fas fa-angle-left fa-fw"></i>测试 section</a>
+            <a href="/posts/20211028-hugo-content-management/" class="next" rel="next" title="Hugo 文件管理与图片存放">Hugo 文件管理与图片存放<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
